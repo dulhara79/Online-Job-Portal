@@ -27,7 +27,7 @@
 </head>
 <body>
     <h1>Recieved Feedback</h1>
-    <img class="admin-logo" src="logo.jpg" alt="">
+    <img class="admin-logo" src="../images/logo.jpg" alt="">
     <div class="nav-bar-div">
         <ul>
             <li><a class="active" href="dashboard.php">DashBoard</a></li>
