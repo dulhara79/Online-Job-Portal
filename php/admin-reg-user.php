@@ -13,7 +13,7 @@
 <html>
 <head>
     <title>Register Users</title>
-    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
 </head>
 <body>
     <h1>User Table</h1>
