@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Data Table</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+        body  {
+  background-image: url("./job.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+}
+table tr:nth-child(even) {
+    background-color: #ded0ee;
+}
+#button-back {
+            background-color: rgb(247, 79, 37); /* Green background color */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Padding for size (top/bottom, left/right) */
+            border: none; /* Remove the default button border */
+            border-radius: 5px; /* Rounded corners */
+            float: left; /* Float to the right */
+            cursor: pointer; /* Change cursor to a hand icon on hover */
+        }
+
+        /* Hover effect for better user experience */
+        #button-back:hover {
+            background-color: rgb(109, 20, 4); /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image-container">
+    <h1>Post Jobs Table</h1>
+    <br/>
+    <button id="button-back">Back</button>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>JobID</th>
+                <th>Name</th>
+                <th>Industry</th>
+                <th>Description</th>
+                <th>Salary</th>
+                <th>Date</th>
+                <th>Action Edit</th>
+                <th>Action Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="./scripts.js"></script>
+    <script>
+        // JavaScript to handle button click to page navigation
+        document.getElementById("button-back").addEventListener("click", function() {
+            window.location.href = "./index.html"; 
+        }
+        )
+    </script>
+</div>
+</body>
+</html>
