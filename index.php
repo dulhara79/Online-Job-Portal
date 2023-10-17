@@ -48,40 +48,112 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            /* Your existing navbar styles */
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        /* Add your existing styles here */
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="box form-box">
-            <?php 
-            if(isset($error_message)){
-                echo "<div class='message'>
-                          <p>$error_message</p>
-                      </div> <br>";
-                echo "<a href='index.php'><button class='btn'>Go Back</button>";
-            }
-            ?>
-            <header>Login</header>
-            <form action="" method="post">
-                <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" autocomplete="off" required>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">JOBS.lk</h2>
                 </div>
 
-                <div class="field input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="off" required>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">JOB LISTING</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="php/feedback/index.php">FEEDBACK</a></li>
+                    </ul>
                 </div>
 
-                <div class="field">
-                    <input type="submit" class="btn" name="submit" value="Login" required>
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type To text">
+                    <a href="#"> <button class="btn">Search</button></a>
                 </div>
-                <div class="links">
-                    Don't have an account? <a href="register.php">User</a>  ||  <a href="registerc.php">Company</a>
+            </div>
+
+            <div class="content">
+                <h1>Explore Exciting <br><span>Job Opportunities</span></h1>
+                <p class="par">Discover your dream job in the dynamic world of online opportunities. <br> Explore a variety of roles and take the next step in your career journey.</p>
+
+                <button class="cn"><a href="#">EXPLORE JOBS</a></button>
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <form action="" method="post">
+                        <div class="field input">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" autocomplete="off" required>
+                        </div>
+
+                        <div class="field input">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" autocomplete="off" required>
+                        </div>
+
+                        <div class="field">
+                            <input type="submit" class="btn" name="submit" value="Login" required>
+                        </div>
+                        <div class="links">
+                            Don't have an account? <a href="register.php">User</a>  ||  <a href="registerc.php">Company</a>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
-      </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2023 JOBS.lk ...... All rights reserved.
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@ if(!isset($_SESSION['valid']) && !isset($_SESSION['valid_company'])){
 <body>
     <div class="nav">
         <div class="logo">
-            <p><a href="home.php">Logo</a></p>
+            <p><a href="#">JOBS.lk</a></p>
         </div>
 
         <div class="right-links">
