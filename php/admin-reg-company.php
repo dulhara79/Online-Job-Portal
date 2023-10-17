@@ -5,9 +5,8 @@
 <?php
     $sql_company = "Select * From company";
     $sql_company_contact_num = "Select * From company_contact_num";
-    $result_company = mysqli_query($conn, $sql_company);
-    $result_company_contNo = mysqli_query($conn, $sql_company_contact_num);
-    //$sql_cont_condi = "SELECT * FROM Company_contact_no WHERE ";
+    $result_company = mysqli_query($con, $sql_company);
+    $result_company_contNo = mysqli_query($con, $sql_company_contact_num);
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +63,7 @@
                         <td>
                         <?php 
                     $sql_user_contNo = "SELECT * FROM company_contact_num WHERE company_id = '$id'";
-                    $result_company_contNo = mysqli_query($conn, $sql_user_contNo);
+                    $result_company_contNo = mysqli_query($con, $sql_user_contNo);
                     if($result_company_contNo->num_rows > 0) {
                 while($row = $result_company_contNo->fetch_assoc()) {
             ?>

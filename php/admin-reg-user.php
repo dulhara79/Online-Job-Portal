@@ -6,7 +6,7 @@
         $sql_reg_user = "SELECT * FROM reg_user";
        
 
-        $result_reg_user = mysqli_query($conn, $sql_reg_user);
+        $result_reg_user = mysqli_query($con, $sql_reg_user);
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +66,7 @@
                     <td>
                     <?php 
                     $sql_user_contNo = "SELECT * FROM User_contact_no WHERE user_id = '$id'";
-                    $result_user_contNo = mysqli_query($conn, $sql_user_contNo);
+                    $result_user_contNo = mysqli_query($con, $sql_user_contNo);
                     if($result_user_contNo->num_rows > 0) {
                 while($row = $result_user_contNo->fetch_assoc()) {
             ?>

@@ -2,20 +2,8 @@
     include "config.php";
 ?>
 <?php
-  /*  $i = 0
-    $sql_reg_user = "SELECT * FROM reg_user";
-    $result_reg_user = mysqli_query($conn, $sql_reg_user);
-
-        if($result_user_count->num_rows > 0) {
-            while($row=$result_user_count->fetch_assoc()) {
-                $i += 1;
-            }
-        } else {
-            
-        } */
-       // <?php
     $sql = "SELECT COUNT(*) as user_count FROM reg_user"; 
-    $result = $conn->query($sql);
+    $result = $con->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -26,7 +14,7 @@
     }
 
     $sql_comp = "SELECT COUNT(*) as company_count FROM company"; 
-    $result = $conn->query($sql_comp);
+    $result = $con->query($sql_comp);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -37,7 +25,7 @@
     }
 
 
-    $conn->close();
+    $con->close();
 ?>
 
 <!DOCTYPE html>
