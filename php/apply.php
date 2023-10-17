@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include "config.php";
 
 if (isset($_POST ['submit'])) 
 {
@@ -30,7 +30,7 @@ if (isset($_POST ['submit']))
 <html>
 <head>
     <title>Job Application</title>
-    <link rel="stylesheet" type="text/css" href="apply.css">
+    <link rel="stylesheet" type="text/css" href="../css/apply.css">
     
 
 </head> 
