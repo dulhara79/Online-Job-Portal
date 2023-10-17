@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Job Data Table</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./post.css">
     <style>
         body  {
   background-image: url("./job.jpg");
@@ -26,6 +26,32 @@ table tr:nth-child(even) {
         #button-back:hover {
             background-color: rgb(109, 20, 4); /* Darker green on hover */
         }
+
+        .apply:link, .apply:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.save:hover, .save:active {
+  background-color: red;
+}
+
+.save:link, .save:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.apply:hover, .apply:active {
+  background-color: blue;
+}
     </style>
 </head>
 <body>
@@ -49,6 +75,13 @@ table tr:nth-child(even) {
         </thead>
         <tbody></tbody>
     </table>
+    <div class="apply">
+        <a href="#" target="_blank">Apply Now</a><br/>
+        </div>
+        <div class="save">
+        <a href="#" target="_blank">Save Jobs</a>
+        </div>
+        
     <script src="./scripts.js"></script>
     <script>
         // JavaScript to handle button click to page navigation
