@@ -50,15 +50,15 @@
     <h1>Admin page</h1>
     <img class="admin-logo" src="logo.jpg" alt="">
     <div class="nav-bar-div">
-        <ul>
+    <ul>
             <li><a class="active" href="dashboard.php">DashBoard</a></li>
             <li><a href="admin-reg-user.php">Register Users</a></li>
             <li><a href="admin-reg-company.php">Register company</a></li>
-            <li><a href="feedback.php">Feedback</a></li>
+            <li><a href="feedback-Admin.php">Feedback</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#about">Log in</a></li>
-            <li><a href="#about">Sign up</a></li>
+            <li><a href="../index.php">Log in</a></li>
+            <li><a href="../register.php">Sign up</a></li>
         </ul>
     </div>
     <div class="count-div" onclick="reloadpage()">
