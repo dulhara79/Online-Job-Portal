@@ -1,5 +1,5 @@
 <?php
-    include 'conn.php';
+    include 'config.php';
 
     // Initialize variables to avoid undefined variable warnings
     $id = $fname = $mname = $lname = $addl1 = $addl2 = $city = $postc = $email = "";
