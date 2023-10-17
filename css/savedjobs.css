@@ -1,0 +1,39 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 60px;
+    border-radius: 10px;
+}
+h1 {
+    margin: 0;
+}
+.job-listing {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+.job-listing h2 {
+    margin: 0;
+}
+.apply-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.unsave-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
