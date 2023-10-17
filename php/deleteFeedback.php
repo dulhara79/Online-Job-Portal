@@ -7,7 +7,7 @@
        $sql="DELETE FROM Feedback WHERE feedback_id = '$id'";
        $result = mysqli_query($conn, $sql);
        if($result == TRUE) {
-        echo '<script>deleted();</script>'
+        echo '<script>deleted();</script>' ;
        }
        else {
         die(mysqli_error($conn));
