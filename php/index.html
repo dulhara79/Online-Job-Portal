@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Jobs</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+        /* Style the button */
+        #button1 {
+            background-color: green; /* Green background color */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Padding for size (top/bottom, left/right) */
+            border: none; /* Remove the default button border */
+            border-radius: 5px; /* Rounded corners */
+            float: right; /* Float to the right */
+            cursor: pointer; /* Change cursor to a hand icon on hover */
+        }
+
+        /* Hover effect for better user experience */
+        #button1:hover {
+            background-color: darkgreen; /* Darker green on hover */
+        }
+        form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    background-color: rgb(21, 27, 75);
+    color:#cccccc;
+}
+input {
+    width: 90%;
+}
+body  {
+  background-image: url("./job.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    </style>
+</head>
+<body>
+    <div class="background-image-container">
+    <h1>Post Your Job Here</h1>
+    
+    <br/>
+
+    <button id="button1">Job List</button>
+
+    <form action="post.php" method="post" id="addForm" >
+        <label for="name">Company Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="jobType">Industry:</label>
+        <input type="text" id="job-type" name="jobType" required>
+        
+        <label for="address">Description:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+
+        <label for="contactNo">Date:</label>
+        <input type="tel" id="contact-number" name="contactNo" required>
+        <br/>
+        <label></label>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+        // JavaScript to handle button click to page navigation
+        document.getElementById("button1").addEventListener("click", function() {
+            window.location.href = "./table.html"; 
+        }
+        )
+    </script>
+    <script>
+        
+        document.getElementById("addForm").addEventListener("submit", function(event) {
+        // Display a pop-up message
+        if (window.confirm("You have to pay Rs. 500.00 to post this ad. Click OK to proceed.")) {
+            // If the user clicks OK, redirect to table.html
+            window.location.href = "./table.html";
+        } else {
+            event.preventDefault(); // Prevent the form from submitting if the user clicks Cancel
+        }
+    });
+    </script>
+    </div>
+</body>
+</html>

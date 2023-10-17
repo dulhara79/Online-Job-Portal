@@ -6,14 +6,14 @@
         $sql_reg_user = "SELECT * FROM reg_user";
        
 
-        $result_reg_user = mysqli_query($conn, $sql_reg_user);
+        $result_reg_user = mysqli_query($con, $sql_reg_user);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Register Users</title>
-    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
 </head>
 <body>
     <h1>User Table</h1>
@@ -23,11 +23,11 @@
             <li><a class="active" href="dashboard.php">DashBoard</a></li>
             <li><a href="admin-reg-user.php">Register Users</a></li>
             <li><a href="admin-reg-company.php">Register company</a></li>
-            <li><a href="feedback.php">Feedback</a></li>
+            <li><a href="feedback-Admin.php">Feedback</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#about">Log in</a></li>
-            <li><a href="#about">Sign up</a></li>
+            <li><a href="../index.php">Log in</a></li>
+            <li><a href="../register.php">Sign up</a></li>
         </ul>
     </div>
     <table border="1px solod black">
@@ -66,7 +66,7 @@
                     <td>
                     <?php 
                     $sql_user_contNo = "SELECT * FROM User_contact_no WHERE user_id = '$id'";
-                    $result_user_contNo = mysqli_query($conn, $sql_user_contNo);
+                    $result_user_contNo = mysqli_query($con, $sql_user_contNo);
                     if($result_user_contNo->num_rows > 0) {
                 while($row = $result_user_contNo->fetch_assoc()) {
             ?>

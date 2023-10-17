@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Create a CV</title>
-    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
 </head>
 <body>
     <h1>Create CV</h1>

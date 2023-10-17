@@ -19,11 +19,11 @@
 
         $sql_update = "UPDATE `reg_user` SET first_name='$fname', middle_name='$mname', last_name='$lname', Email='$email', Password='$psw', AddressLine1='$addline1', AddressLine2='$addline2', City='$city', PostalCode='$pcode' WHERE user_id='$id'";
 
-        if($conn->query($sql_update) === TRUE) {
+        if($con->query($sql_update) === TRUE) {
             echo "Record updated!";
         }
         else {
-            echo "Error: " . $sql_update . "<br>" . $conn->error;
+            echo "Error: " . $sql_update . "<br>" . $con->error;
         }
     }
     /*
@@ -31,7 +31,7 @@
         $id = $_GET['user_id'];
 
         $sql_select = "SELECT * FROM `reg_user` WHERE user_id='$id'";
-        $result = $conn->query($sql_select);
+        $result = $con->query($sql_select);
 
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
