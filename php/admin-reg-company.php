@@ -14,10 +14,11 @@
 <head>
     <title>Register Companys</title>
     <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="../js/admin-script.js"></script>
 </head>
 <body>
     <h1>Company Table</h1>
-    <img class="admin-logo" src="logo.jpg" alt="">
+    <img class="admin-logo" src="../images/logo.jpg" alt="LOGO" onclick="reloadpage();">
     <div class="nav-bar-div">
          <ul>
             <li><a class="active" href="dashboard.php">DashBoard</a></li>
@@ -42,6 +43,7 @@
                 <th>City</th>	
                 <th>PostalCode</th>
                 <th>Contact number</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -71,8 +73,11 @@
                     <?php
                 }
             } ?></td>
-                        <td> <a class="update-btn" href="updateCompany.php?updateid=<?php echo $row['company_id'];?>">Edit</a> &nbsp; <a class="delete-bttn" href="deleteCompany.php?deleteid=<?php echo $row['company_id']; ?>">Delete</a></td>
-                        </tr>
+                        <!--<td><button><a class="update-btn" href="updateCompany.php?updateid= $id ">Update</a></button><button><a class="delete-btn" href="deleteCompany.php?deleteid= $id ">Delete</a></button></td>-->$_COOKIE<td>
+    <button><a class="update-btn" href="updateCompany.php?updateid=<?php echo $id; ?>">Update</a></button>
+    <button><a class="delete-btn" href="deleteCompany.php?deleteid=<?php echo $id; ?>">Delete</a></button>
+</td>
+</tr>
                     <?php
             }
         }

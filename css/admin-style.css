@@ -1,3 +1,7 @@
+body {
+    background-color: #E4E9F7;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -89,4 +93,9 @@ a {
 .admin-logo {
     height: 100px;
     width: 100px;
+}
+
+.reg-user-count-div {
+    background-color: rgb(201, 94, 94);
+    color: #111;
 }

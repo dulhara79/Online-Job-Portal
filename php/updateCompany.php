@@ -1,5 +1,5 @@
 <?php
-    include'config.php';
+    include 'config.php';
 
 $name = $addline1 = $addline2 = $email = $city  = $pcode = $psw = " ";
 
@@ -14,47 +14,40 @@ $name = $addline1 = $addline2 = $email = $city  = $pcode = $psw = " ";
         $pcode = $_POST['post_code'];
         $psw = $_POST['company_password'];
 
-        $sql_update = "UPDATE  `company` SET company_name = '$name', email = '$email', company_Password = '$psw', address_line1 = '$addline1', address_line2 = '$addline2', city = '$city', post_code = '$pcode' WHERE company_id = $id";
+        $sql_update = "UPDATE  `company` SET company_name = '$name', email = '$email', company_Password = '$psw', address_line1 = '$addline1', address_line2 = '$addline2', city = '$city', post_code = '$pcode' WHERE company_id = '$id'";
 
-        if($conn->query($sql_update) === TRUE) {
+        if($con->query($sql_update) === TRUE) {
             echo "Record updated!";
         }
         else {
-            echo "Error: " . $sql_update . "<br>" . $conn->error;
+            echo "Error: " . $sql_update . "<br>" . $con->error;
         }
     }
 
-    /*
-    if(isset($_GET['company_id'])) {
-        $user_id = $GET['company_id'];
-
-        $sql = "SELECT * FROM `company` WHERE 'company_id' = $user_id";
-
-        $result = $conn->query($sql);
-
-        if($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                $id = $row['company_id'];
-                $name = $row['company_name'];
-                $email = $row['email'];
-                $pw = $row['company_password'];
-                $addl1 = $row['address_line1'];
-                $addl2 = $row['address_line2'];
-                $city = $row['city'];
-                $postc = $row['post_code'];
-            }
-        }
-    }
-
-    $conn->close(); */
+    
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Update Company Profile</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="../js/admin-script.js"></script>
 </head>
 <body>
+<img class="admin-logo" src="../images/logo.jpg" alt="LOGO" onclick="reloadpage();">
+    <div class="nav-bar-div">
+        <ul>
+            <li><a class="active" href="dashboard.php">DashBoard</a></li>
+            <li><a href="admin-reg-user.php">Register Users</a></li>
+            <li><a href="admin-reg-company.php">Register company</a></li>
+            <li><a href="feedback-Admin.php">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="../index.php">Log in</a></li>
+            <li><a href="../register.php">Sign up</a></li>
+        </ul>
+    </div>
     <fieldset>
         <legend>Update Company</legend>
         <form action="" method="POST">

@@ -1,15 +1,12 @@
 <?php
     include 'config.php';
 
-    // Initialize variables to avoid undefined variable warnings
-    $id = $fname = $mname = $lname = $addl1 = $addl2 = $city = $postc = $email = "";
-
     $id = $_GET['updateid'];
 
     if(isset($_POST['update'])) {
-        $fname = $_POST['first_name'];
-        $mname = $_POST['middle_name'];
-        $lname = $_POST['last_name'];
+        $fname = $_POST['fname'];
+        $mname = $_POST['mname'];
+        $lname = $_POST['lname'];
         $addline1 = $_POST['AddressLine1'];
         $addline2 = $_POST['AddressLine2'];
         $email = $_POST['Email'];
@@ -26,7 +23,7 @@
             echo "Error: " . $sql_update . "<br>" . $con->error;
         }
     }
-    /*
+
     if(isset($_GET['user_id'])) {
         $id = $_GET['user_id'];
 
@@ -35,20 +32,20 @@
 
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                $id = $row['user_id'];
-                $fname = $row['first_name'];
-                $mname = $row['middle_name'];
-                $lname = $row['last_name'];
-                $email = $row['Email'];
-                $psw = $row['Password'];
-                $addl1 = $row['AddressLine1'];
-                $addl2 = $row['AddressLine2'];
-                $city = $row['City'];
-                $postc = $row['PostalCode'];
+                $prev_id = $row['user_id'];
+                $prev_fname = $row['first_name'];
+                $prev_mname = $row['middle_name'];
+                $prev_lname = $row['last_name'];
+                $prev_email = $row['Email'];
+                $prev_psw = $row['Password'];
+                $prev_addl1 = $row['AddressLine1'];
+                $prev_addl2 = $row['AddressLine2'];
+                $prev_city = $row['City'];
+                $prev_postc = $row['PostalCode'];
             }
         }
     }
-    */
+
     
 ?>
 
@@ -56,16 +53,31 @@
 <html>
 <head>
     <title>Update user Profile</title>
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="../js/admin-script.js"></script>
 </head>
 <body>
+    <img class="admin-logo" src="../images/logo.jpg" alt="LOGO">
+    <div class="nav-bar-div">
+        <ul>
+            <li><a class="active" href="dashboard.php">DashBoard</a></li>
+            <li><a href="admin-reg-user.php">Register Users</a></li>
+            <li><a href="admin-reg-company.php">Register company</a></li>
+            <li><a href="feedback-Admin.php">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="../index.php">Log in</a></li>
+            <li><a href="../register.php">Sign up</a></li>
+        </ul>
+    </div>
     <fieldset>
         <legend>Add user</legend>
         <form action="" method="POST">
             <label for="user-id" class="form-lable-admin">User ID</label><br>
-            <input type="text" class="input-data-admin" name="id" placeholder="User ID" value="<?php echo $id; ?>" disabled><br>
+            <input type="text" class="input-data-admin" name="id" placeholder="User ID" value="<?php echo $prev_id; ?>" disabled><br>
         
             <label for="fname" class="form-lable-admin">Name</label><br>
-            <input type="text" class="input-data-admin" name="fname" placeholder="First name">
+            <input type="text" class="input-data-admin" name="fname" value="<?php echo $prev_fname; ?>">
             <input type="text" class="input-data-admin" name="mname" placeholder="Middle name">
             <input type="text" class="input-data-admin" name="lname" placeholder="Last name"><br>
             
@@ -91,7 +103,3 @@
     </fieldset>
 </body>
 </html>
-
-<?php
-   // header('Location: dashboard.php');
-?>

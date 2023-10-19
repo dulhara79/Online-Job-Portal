@@ -12,7 +12,7 @@ if (isset($_POST ['submit']))
     $cv = $_FILES['cv']['name'];
 
     $sql = "INSERT INTO job_applications(first_name, last_name,address, sex, dob, education, cv) 
-    VALUES ('$first_name','$last_name',' $address',' $sex','$dob','$education','$cv') ";
+    VALUES ('$first_name','$last_name',' $address',' $sex','$dob','$education',' ') ";
     $result=mysqli_query($con,$sql);
     if($result)
     {

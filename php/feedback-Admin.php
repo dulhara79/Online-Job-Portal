@@ -24,10 +24,11 @@
 <head>
     <title>Register Users</title>
     <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="../js/admin-script.js"></script>
 </head>
 <body>
     <h1>Recieved Feedback</h1>
-    <img class="admin-logo" src="../images/logo.jpg" alt="">
+    <img class="admin-logo" src="../images/logo.jpg" alt="LOGO" onclick="reloadpage();">
     <div class="nav-bar-div">
         <ul>
             <li><a class="active" href="dashboard.php">DashBoard</a></li>

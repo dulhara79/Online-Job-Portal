@@ -2,7 +2,7 @@
     include "config.php";
 ?>
 <?php
-    $sql = "SELECT COUNT(*) as user_count FROM reg_user"; 
+    $sql = "SELECT COUNT(*) as user_count FROM users"; 
     $result = $con->query($sql);
 
     if ($result->num_rows > 0) {
@@ -33,15 +33,17 @@
 <head>
     <title>Admin-DashBoard</title>
     <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="../js/admin-script.js"></script>
 </head>
 <body>
     <h1>Admin page</h1>
-    <img class="admin-logo" src="logo.jpg" alt="">
+    <img class="admin-logo" src="../images/logo.jpg" alt="LOGO" onclick="reloadpage();">
     <div class="nav-bar-div">
     <ul>
             <li><a class="active" href="dashboard.php">DashBoard</a></li>
-            <li><a href="admin-reg-user.php">Register Users</a></li>
+            <li><a href="admin/alluser.php">Register Users</a></li>
             <li><a href="admin-reg-company.php">Register company</a></li>
+            <li><a href="createCV.php">Create CV</a></li>
             <li><a href="feedback-Admin.php">Feedback</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
@@ -62,10 +64,3 @@
 
 </body>
 </html>
-
-<?php
-   // include "admin-reg-user.php";
-?>
-<?php
-  //  include "admin-reg-company.php";
-?>

@@ -14,10 +14,11 @@
 <head>
     <title>Register Users</title>
     <link rel="stylesheet" href="../css/admin-style.css">
+    <script src="../js/admin-script.js"></script>
 </head>
 <body>
     <h1>User Table</h1>
-    <img class="admin-logo" src="logo.jpg" alt="">
+    <img class="admin-logo" src="../images/logo.jpg" alt="LOGO">
     <div class="nav-bar-div">
         <ul>
             <li><a class="active" href="dashboard.php">DashBoard</a></li>
@@ -44,6 +45,7 @@
                 <th>City</th>	
                 <th>PostalCode</th>
                 <th>Contact number</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -74,8 +76,9 @@
                     <?php
                 }
             } ?></td>
-                <td> <a class="update-btn" href="updateUser.php?updateid=<?php echo $row['user_id'];?>">Edit</a> &nbsp; <a class="delete-bttn" href="deleteUser.php?deleteid=<?php echo $row['user_id']; ?>">Delete</a></td>
-                </tr>
+                <td> <!--<a class="update-btn" href="updateUser.php?updateid=<?php echo $row['user_id'];?>">Edit</a> &nbsp; <a class="delete-bttn" href="deleteUser.php?deleteid=<?php echo $row['user_id']; ?>">Delete</a></td>-->
+                <td><button><a class="update-btn" href="updateUser.php?updateid=<?php $id ?> ">Update</a></button><button><a class="delete-bttn" href="deleteUser.php?deleteid=<?php $id ?>">Delete</a></button></td>    
+            </tr>
                     <?php
             }
         }
